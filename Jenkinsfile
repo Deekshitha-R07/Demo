@@ -22,10 +22,10 @@ pipeline {
 //                 bat 'mvn package'
 //             }
 //         }
-        stage('Deploying') {
-            steps {
-                bat "copy target\\blink.war \"${tomcatWeb}\\blink.war\""
-            }
-        }
+//         stage('Deploying') {
+//             steps {
+//                 bat "copy target\\blink.war \"${tomcatWeb}\\blink.war\""
+//             }
+//         }
     }
 }
