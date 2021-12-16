@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'mvn clean package'
+                sh 'mvn clean package'
             }
         }
       
@@ -24,7 +24,7 @@ pipeline {
 //         }
        stage('Deploying') {
             steps {
-                bat "copy target\\aespa.war \"${tomcatWeb}\\aespa.war\""
+                sh "copy target\\aespa.war \"${tomcatWeb}\\aespa.war\""
             }
          }
     }
