@@ -22,10 +22,10 @@ pipeline {
 //                 bat 'mvn package'
 //             }
 //         }
-       stage('Deploying') {
-            steps {
-                bat "copy target\\aespa.war \"${tomcatWeb}\\aespa.war\""
-            }
-         }
+//        stage('Deploying') {
+//             steps {
+//                 bat "copy target\\aespa.war \"${tomcatWeb}\\aespa.war\""
+//             }
+//          }
     }
 }
