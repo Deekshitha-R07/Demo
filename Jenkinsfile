@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean install -f Demo/pom.xml'
+                sh 'M2_HOME clean install -f Demo/pom.xml'
             }
         }
       
