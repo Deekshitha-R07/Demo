@@ -4,6 +4,9 @@ def tomcatWeb = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\weba
 
 pipeline {
     agent any
+    tools{
+        maven 'M2_HOME'
+    }
     stages {
         stage('Build') {
             steps {
