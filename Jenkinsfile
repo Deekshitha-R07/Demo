@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean package -f Demo/pom.xml'
+                sh 'mvn clean install -f Demo/pom.xml'
             }
         }
       
@@ -25,10 +25,10 @@ pipeline {
 //                 bat 'mvn package'
 //             }
 //         }
-       stage('Deploying') {
-            steps {
-                sh "copy target\\aespa.war \"${tomcatWeb}\\aespa.war\""
-            }
-         }
+//        stage('Deploying') {
+//             steps {
+//                 sh "copy target\\aespa.war \"${tomcatWeb}\\aespa.war\""
+//             }
+//          }
     }
 }
