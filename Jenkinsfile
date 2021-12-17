@@ -4,31 +4,17 @@ def tomcatWeb = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\weba
 
 pipeline {
     agent any
-    tools{
-        maven 'M2_HOME'
-    }
     stages {
         stage('Build') {
             steps {
-                sh 'mvn clean install -f Demo/pom.xml'
+                bat 'mvn clean package'
             }
         }
       
-//         stage('Test') {
-//             steps {
-//                 bat 'mvn test'
-//             }
-//         }
-      
-//         stage('Packaging') {
-//             steps {
-//                 bat 'mvn package'
-//             }
-//         }
-//        stage('Deploying') {
-//             steps {
-//                 sh "copy target\\aespa.war \"${tomcatWeb}\\aespa.war\""
-//             }
-//          }
+       stage('Deploying') {
+            steps {
+                bat "copy target\\aespa.war \"${tomcatWeb}\\aespa.war\""
+            }
+         }
     }
 }
