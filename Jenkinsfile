@@ -13,7 +13,7 @@ pipeline {
       
        stage('Deploying') {
             steps {
-                bat "copy target\\aespa.war \"${tomcatWeb}\\aespa.war\""
+                bat "copy target\\aespa.war \"${tomcatWeb}\""
             }
          }
     }
